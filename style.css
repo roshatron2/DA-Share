@@ -1,59 +1,90 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+body {
+  background: #f1f3f6;
 }
 
-.logo{
-    font-size: 24px;
+nav {
+  display: flex;
+  padding: 20px;
+  background-color: #232f3e;
+  color: #fff;
 }
 
-input{
-    width: 300px;
+.logo {
+  font-size: 24px;
+  padding-top: 5px;
 }
 
-
-
-.main{
-    display: flex;
+input {
+  width: 50%;
+  margin-left: 20%;
+  height: 40px;
+  font-size: 14px;
+  padding: 5px;
+  outline: none;
+  padding-left: 20px;
+  border-radius: 3px;
+  border: none;
 }
 
-.aside{
-    flex-basis: 15%;
-    padding: 10px;
-    font-size: 17px;
+.tab {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
 }
 
-.main-col{
-    border-left: 1px solid;
-    padding-top: 10px;
-    padding-left: 20px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+.tab a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
 }
 
-.cards{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 3px;
-    margin: 20px;
-    width: 200px;
-    
+.main {
+  width: 80%;
+  margin: auto;
 }
 
-.cards p{
-    margin-top: 5px;
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.712);
+  margin-top: 20px;
 }
 
-.cards img{
-    width: 100%;
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 20px;
+  width: 200px;
+  transition: background 400ms ease-in;
+}
+
+.card:hover {
+  background: rgba(141, 141, 141, 0.068);
+}
+
+.card img {
+  border-radius: 3px;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
 }
