@@ -22,6 +22,18 @@ nav {
   padding-top: 5px;
 }
 
+.search-bar {
+  flex-basis: 90%;
+  position: relative;
+}
+
+#search {
+  color: #000;
+  position: absolute;
+  left: 273px;
+  top: 13px;
+}
+
 input {
   width: 50%;
   margin-left: 20%;
@@ -29,9 +41,13 @@ input {
   font-size: 14px;
   padding: 5px;
   outline: none;
-  padding-left: 20px;
+  padding-left: 30px;
   border-radius: 3px;
   border: none;
+}
+
+input:focus #search {
+  display: none;
 }
 
 .tab {
@@ -46,17 +62,22 @@ input {
   color: #000;
 }
 
+.tab a:hover {
+  border-bottom: 2px solid black;
+}
+
 .main {
   width: 80%;
   margin: auto;
 }
 
 .row {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
+  justify-content: space-around;
   background: rgba(255, 255, 255, 0.712);
   margin-top: 20px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -64,7 +85,8 @@ input {
   flex-direction: column;
   padding: 10px;
   border-radius: 3px;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 200px;
   transition: background 400ms ease-in;
 }
